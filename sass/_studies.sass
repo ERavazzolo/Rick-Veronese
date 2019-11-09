@@ -1,0 +1,150 @@
+.study
+    &__textbox
+        h1 
+            line-height: 1.8
+
+    &--grey 
+        background-color: $color-grey-dark  //base color for tidal
+    
+    &--blue
+        background-color: $color-blue-dark  //base color for king kog
+    
+    &--green 
+        background-color: $color-green-dark  //base color for instashop
+
+    &--brown 
+        background-color: $color-brown  //base color for perinella
+
+    &__details
+        grid-column: 1 / -1
+
+        padding: 5rem 8vw 7rem 8vw
+
+        display: grid
+        grid-template-columns: repeat(3, 1fr)
+        text-align: center
+
+        @media only screen and (max-width: $bp-700)
+            grid-template-columns: 1fr
+            grid-row-gap: calc(1rem + 2vw)
+
+    &__detail
+        p 
+            text-transform: uppercase
+            font-weight: bold
+
+    &__body
+        grid-column: 1 / -1 
+        display: grid
+        grid-template-columns: [full-start] minmax(5vw, 1fr) [center-start] minmax(min-content, 63rem) [center-end] minmax(5vw, 1fr) [full-end]
+
+        padding: 4rem 0
+
+        .wrapper-two-columns
+            grid-template-columns: repeat(2, 1fr)
+            grid-column-gap: 3rem
+
+            @media only screen and (max-width: $bp-700)
+                grid-template-columns: 1fr  //change grid definition for smaller screens
+                grid-column-gap: 0
+
+    &__step,
+    &__challenge
+        text-align: justify     //justifies text
+        align-self: start
+
+        display: grid
+        grid-row-gap: 2rem
+
+        h3 
+            justify-self: center  //center the title only
+    
+    &__challenge
+        grid-column: 1 / -1
+
+
+/////////// GALLERY LAYOUT for lightbox /////////////
+
+.gallery
+    display: grid
+    grid-column-gap: 2rem
+    grid-row-gap: 2rem
+
+    &--1Col
+        grid-template-columns: 1fr
+
+    &--2Col
+        grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr))
+    
+    &--3Col
+        grid-template-columns: repeat(auto-fit, minmax(19rem, 1fr))
+
+    &--4Col
+        grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr))
+
+    &__img
+        max-width: 100%
+        width: 100%
+        display: block
+        transition: opacity .2s ease-in-out
+
+        &:hover
+            opacity: .70
+    
+    &__title
+        display: grid
+        grid-template-columns: 1fr
+        grid-row-gap: 1rem
+
+        & > .heading-4:not(.no-line)
+            text-align: center
+
+            display: grid
+            grid-template-columns: 1fr max-content 1fr
+            grid-column-gap: .5rem
+            align-items: center
+
+            &::before,
+            &::after
+                content: ""
+                display: block
+                height: 2px
+                background-color: $color-grey-light
+
+
+////////////// FULL BLEED TITLES ///////////
+
+.phase
+    grid-column: 1 / -1
+    text-align: center
+
+    &__title
+        padding: 5rem calc(4rem + 3vw)
+
+    &__small
+        &::after
+            content: ""
+            display: block
+            margin: 3rem auto 3rem
+            width: 110rem
+            height: 1px
+            text-align: center
+
+            @media only screen and (max-width: $bp-1200)
+                width: auto
+
+        &--grey 
+            &::after
+                background-color: darken($color-grey-light, 70)     //tidal
+
+        &--blue 
+            &::after
+                background-color: lighten($color-blue-dark, 05)     //king kog
+
+        &--green 
+            &::after
+                background-color: lighten($color-green-dark, 05)    //instashop
+
+        &--brown 
+            &::after
+                background-color: lighten($color-brown, 05)     //perinella

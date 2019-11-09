@@ -1,0 +1,50 @@
+*,
+*::before,
+*::after 
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+
+html 
+    overflow-x: hidden
+    font-size: 62.5%
+
+    @media only screen and (max-width: $bp-900)
+        font-size: 56.25%
+
+body 
+    overflow-x: hidden
+    height: 100%    //get rid of extra space below the website when resizing
+
+
+
+/////// UTILITIES //////
+
+.mb-lg
+    margin-bottom: 6rem
+.mb-md
+    margin-bottom: calc(3rem + 1vw)
+.mb-sm
+    margin-bottom: 2rem
+
+.wrapper-center-text    //LAYOUT
+    grid-column: 2 / 3
+
+    display: grid
+    grid-template-columns: 1fr
+    grid-row-gap: 5rem
+
+.width-95
+    max-width: 95%
+    justify-self: center
+
+.width-80
+    max-width: 80%
+    justify-self: center
+
+.align-start
+    align-self: start
+
+.no-line
+    text-align: center
+

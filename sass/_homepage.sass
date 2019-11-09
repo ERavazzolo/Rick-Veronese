@@ -1,0 +1,248 @@
+////////// CASE STUDIES //////////
+
+.studies
+    grid-column: full-start / full-end
+
+    margin: 0 auto
+    padding: 5rem 0 8rem 0 
+
+    display: grid //create grid for pictures + section title
+    grid-template-columns: repeat(4, 25vw)
+    grid-row-gap: 5rem
+
+    @media only screen and (max-width: $bp-800)
+        grid-template-columns: repeat(2, 50vw)
+
+    @media only screen and (max-width: $bp-400)
+        grid-template-columns: 100%
+
+    &__heading
+        grid-column: 1 / -1       
+
+        text-align: center
+
+    &__show
+        justify-items: center
+        text-align: center
+        margin: 0
+
+        display: grid //create grid for each project: img + project name + description
+        grid-template-rows: 25vw min-content
+        grid-row-gap: 3rem
+
+        @media only screen and (max-width: $bp-800)
+            grid-template-rows: 40vw min-content
+
+        @media only screen and (max-width: $bp-400)
+            grid-template-rows: 100vw min-content
+    
+    &__img
+        display: block
+        width: 100%
+        height: 100%
+        object-fit: cover
+        cursor: pointer
+
+        transition: opacity .3s ease-in-out
+
+        @media only screen and (max-width: $bp-400)
+            max-width: 100%
+
+        &:hover
+            opacity: .75
+
+    &__description
+        margin-top: -1.5rem
+        font-family: $font-text
+        font-size: 1.6rem
+        width: 90%
+
+
+////////// WORKFLOW ///////////
+
+.workflow
+    grid-column: full-start / full-end //position workflow in container grid
+
+    padding: 5rem 0 8rem 0
+    background-color: $color-primary
+
+    display: grid //create grid to position workflow content
+    justify-content: center //center wrapper in the workflow area
+
+    &__wrapper
+        display: grid //create wrapper grid to position items
+        grid-template-rows: repeat(2, minmax(min-content, 8rem)) 1fr
+        grid-template-columns: minmax(2rem, 1fr) [full-start] repeat(4, [col-start] minmax(min-content, 30rem) [col-end]) [full-end] minmax(2rem, 1fr)
+        align-items: center
+        grid-row-gap: 2rem
+
+    &__heading
+        grid-column: full-start / full-end
+
+        text-align: center
+        line-height: 1
+
+    &__p
+        grid-column: full-start / full-end
+
+    &__overview
+        grid-column: full-start / full-end
+
+        display: grid //create overview grid to align and space items in a row
+        grid-template-columns: [full-start] repeat(auto-fit, minmax(20rem, 1fr)) [full-end]
+
+.overview-step
+    margin-top: calc(3rem + 2vw)
+    text-align: center
+
+    display: grid   //create grid for icon and text
+    grid-template-rows: repeat(2, min-content)
+    grid-row-gap: calc(2rem + 2vw)
+    justify-items: center
+
+    &__icon
+        width: 4rem
+        height: 4rem
+        fill: $color-white
+
+
+////////// PROFILE/ABOUT ///////////
+
+.profile
+    grid-column: center-start / center-end //position profile into container grid
+
+    padding: 5rem 0
+
+    display: grid //create grid to position profile content
+    grid-template-columns: [photo-start] minmax(min-content, 30rem) [photo-end text-start] 1fr [text-end]
+    grid-column-gap: 6vw
+    grid-row-gap: 5rem
+    justify-items: center
+
+    @media only screen and (max-width: $bp-800)
+        grid-template-columns: 100%
+        grid-row-gap: 5rem
+        grid-column-gap: 0
+
+    &__heading
+        grid-column: 1 / -1
+        text-align: center  //keep heading centered when resizing viewport
+    
+    &__photo
+        max-width: 100%
+        height: auto
+        border-radius: 50%
+
+        justify-self: start
+
+        @media only screen and (max-width: $bp-800)
+            max-width: 40%
+            justify-self: center
+
+    &__text
+        display: grid
+        grid-row-gap: 2.5rem
+
+.list
+    list-style-position: outside //align list dots and paragraph
+    margin-left: 3rem
+
+
+////////// GET IN TOUCH ///////////
+
+.touch
+    grid-column: full-start / full-end
+
+    background-color: $color-primary
+    padding: 5rem 2rem
+
+    display: grid
+    justify-content: center
+
+    &__wrapper
+        display: grid
+        grid-template-columns: minmax(min-content, 70rem)
+        grid-template-rows: repeat(2, minmax(min-content, 1fr))
+        grid-row-gap: 2rem
+        justify-items: center //to prevent the button from stretching
+        align-items: center //to prevent the button from stretching
+
+        text-align: center
+
+    &__btn
+        grid-row: 2 / 3
+
+
+////////// TESTIMONIES ///////////
+
+.testimonies
+    grid-column: center-start / center-end
+    
+    padding: 5rem 0 8rem 0
+
+    display: grid
+    justify-content: center
+
+    &__wrapper
+        display: grid
+        grid-row-gap: 3vw
+        justify-items: center
+        align-items: center
+
+        @media only screen and (max-width: $bp-800)
+            grid-row-gap: 6vw
+
+    
+    &--1,
+    &--2,
+    &--3 
+        grid-column: 1 / -1
+
+        display: grid
+        grid-template-columns: [photo-start] minmax(min-content, 22rem) [photo-end quote-start] minmax(40rem, 84rem)[quote-end]
+        grid-column-gap: calc(8rem + 8vw)
+
+        @media only screen and (max-width: $bp-800)
+            grid-template-columns: 100% 
+            grid-row-gap: 3vw
+            grid-column-gap: 0
+
+    &--1
+        grid-row: 2 / 3
+    
+    &--2
+        grid-row: 3 / 4
+
+    &--3 
+        grid-row: 4 / 5
+
+    &__heading
+        grid-column: 1 / -1
+
+    &__photo
+        grid-column: photo-start / photo-end
+
+        justify-self: end
+        align-self: start
+
+        @media only screen and (max-width: $bp-800)
+            grid-column: 1 / -1
+            justify-self: center
+
+    &__quote
+        grid-column: quote-start/ quote-end
+
+        border: 2px solid $color-grey-light
+        padding: 1.5rem
+
+        @media only screen and (max-width: $bp-800)
+            grid-column: 1 / -1
+
+    &__name
+        display: block
+        margin-top: 1rem
+
+        &::before
+            content: "\2014"    //add long hyphen before name
+            display: inline-block
+            width: 1rem
