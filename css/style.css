@@ -486,7 +486,7 @@ body {
 }
 @media only screen and (max-width: 25em) {
   .foot-nav {
-    grid-template-columns: repeat(2, 13rem);
+    grid-template-columns: 1fr;
     grid-row-gap: 1rem;
   }
 }
@@ -496,6 +496,12 @@ body {
   margin-left: 1rem;
   color: rgba(255, 255, 255, 0.5);
 }
+@media only screen and (max-width: 25em) {
+  .foot-nav__item:not(:last-child)::after {
+    display: none;
+  }
+}
+  
 .foot-nav__link,
 .foot-nav:link,
 .foot-nav:visited {
