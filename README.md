@@ -11,9 +11,9 @@ This project is the portfolio website of UX/UI Designer Rick Veronese.
 - Use a plugin to visualise images 
 
 ## Tech Stack
-- HTML
+- HTML5
 - CSS3/SASS
-- JS
+- JAVASCRIPT
 - Lightbox plugin
 
 ## Run Locally
