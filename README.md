@@ -12,7 +12,7 @@ This project is the portfolio website of UX/UI Designer Rick Veronese.
 
 ## Tech Stack
 - HTML5
-- CSS3/SASS
+- CSS3: SASS, Flexbox, CSS Grid Layout
 - JAVASCRIPT
 - Lightbox plugin
 
