@@ -486,7 +486,7 @@ body {
 }
 @media only screen and (max-width: 25em) {
   .foot-nav {
-    grid-template-columns: repeat(2, 11rem);
+    grid-template-columns: repeat(2, 13rem);
     grid-row-gap: 1rem;
   }
 }
