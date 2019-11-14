@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato|Nunito|Raleway:700" rel="stylesheet">
+
+    <title>Contact Me</title>
+</head>
+
+<body class="container contact-container">
+    <div class="main-visual contact-visual">
+        <header class="header" id="header">
+            <div class="header__wrapper">
+                <a href="index.html" class="header__logo-link">
+                    <img src="images/logov2.png" alt="rick logo" class="header__logo">
+                </a>
+        
+                <div class="navigation">
+                    <input type="checkbox" class="navigation__checkbox" id="navigation__checkbox">
+                    <label for="navigation__checkbox" class="navigation__button">
+                        <span class="navigation__icon">&nbsp;</span>
+                    </label>
+                
+                    <nav class="navigation__nav">
+                        <ul class="navigation__list">
+                            <li class="navigation__item"><a href="index.html#studies" class="navigation__link">Case studies</a></li>
+                            <li class="navigation__item"><a href="index.html#workflow" class="navigation__link">Workflow</a></li>
+                            <li class="navigation__item"><a href="index.html#profile" class="navigation__link">About</a></li>
+                            <li class="navigation__item"><a href="contact.html" class="navigation__link" id="hire-btn">Hire me</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <div class="text-box contact__textbox">
+                <h1 class="heading-1">Let's talk business</h1>
+                <p class="web-p--light">I’m currently available for freelance work, so if you have an idea you want to bring to life, drop me a line.</p>
+            </div>
+        </div>
+    
+        <section class="contact__section">
+            <form action="#" class="contact__form">
+                <div class="form__group">
+                    <label for="name" class="form__label web-p--dark">Your Name (required)</label>
+                    <input type="text" name="name" class="form__input" id="name" required>
+                </div>
+                <div class="form__group">
+                    <label for="email" class="form__label web-p--dark">Your Email (required)</label>
+                    <input type="text" name="email" class="form__input" id="email" required>
+                </div>
+                <div class="form__group">
+                    <label for="subject" class="form__label web-p--dark">Subject</label>
+                    <input type="text" name="Subject" class="form__input" id="subject">
+                </div>
+                <div class="form__group mb-sm">
+                    <label for="comment" class="form__label web-p--dark">Your Message</label>
+                    <textarea type="text" name="Message" class="form__input form__textarea" id="comment"></textarea>
+                </div>
+                <button class="btn btn--red form__button">Send</button>
+            </form>
+
+            <ul class="contact__or">
+                <li class="contact__methods mb-sm">
+                    <svg class="contact__icon contact__icon--1">
+                        <use xlink:href="images/sprite.svg#icon-skype"></use>
+                    </svg>
+                    <span>beardedrick</span>
+                </li>
+                <li class="contact__methods">
+                    <svg class="contact__icon">
+                        <use xlink:href="images/sprite.svg#icon-envelope"></use>
+                    </svg>
+                    <span>email@rickveronese.com</span>
+                </li>
+            </ul>
+        </section>
+    </div>
+
+    <footer class="footer">
+        <div class="footer__wrapper">
+            <div class="social">
+                <a href="https://twitter.com/bearded_rick" class="social__link">
+                    <svg class="social__icon">
+                        <use xlink:href="images/sprite.svg#icon-twitter-square"></use>
+                    </svg>
+                </a>
+                <a href="https://www.linkedin.com/in/rickveronese/" class="social__link">
+                    <svg class="social__icon">
+                        <use xlink:href="images/sprite.svg#icon-linkedin-square"></use>
+                    </svg>
+                </a>
+                <a href="https://www.behance.net/beardedrick" class="social__link">
+                    <svg class="social__icon">
+                        <use xlink:href="images/sprite.svg#icon-behance-square"></use>
+                    </svg>
+                </a>
+                <a href="#" class="social__link">
+                    <svg class="social__icon">
+                        <use xlink:href="images/sprite.svg#icon-envelope"></use>
+                    </svg>
+                </a>
+            </div>
+            <ul class="foot-nav">
+                <li class="foot-nav__item">
+                    <a href="index.html" class="foot-nav__link">Homepage</a>
+                </li>
+                <li class="foot-nav__item">
+                    <a href="index.html#studies" class="foot-nav__link">Case Studies</a>
+                </li>
+                <li class="foot-nav__item">
+                    <a href="contact.html" class="foot-nav__link">Contact Me</a>
+                </li>                    
+            </ul>
+            <p class="copyright">Copyright &copy; 2017 Rick Veronese. All Rights Reserved.</p>
+        </div>
+    </footer>
+    
+    <script type="text/javascript" src="js/script.js"></script>
+</body>
+</html>
