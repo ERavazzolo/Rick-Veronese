@@ -15,6 +15,7 @@ This project is the portfolio website of UX/UI Designer Rick Veronese.
 - CSS3: SASS, Flexbox, CSS Grid Layout
 - JAVASCRIPT
 - Lightbox plugin
+- NPM
 
 ## Run Locally
 - Run `git clone https://github.com/ERavazzolo/Rick-Veronese.git`
