@@ -4,7 +4,7 @@ https://eravazzolo.github.io/Rick-Veronese/
 ## Description
 This project is the portfolio website of UX/UI Designer Rick Veronese.
 
-## Criteria
+## Goals
 - Build whole website with the use of CSS Grid Layout and Flexbox 
 - Use of media queries for different screen widths for improved responsiveness
 - Use of Javascript to style the header on scroll
@@ -16,6 +16,11 @@ This project is the portfolio website of UX/UI Designer Rick Veronese.
 - JAVASCRIPT
 - Lightbox plugin
 - NPM
+
+## Outcome
+I am very pleased with my first independent project, using all the features and tools I had set out to use.
+
+This project taught me how to research and skimmed through information sources. Most importantly, I learned how to structure my own workflow through trial and error, giving myself time to experiment with different strategies.
 
 ## Run Locally
 - Run `git clone https://github.com/ERavazzolo/Rick-Veronese.git`
